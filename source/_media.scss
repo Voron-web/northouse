@@ -1,0 +1,123 @@
+@media (max-width: 1400px) {
+    .container {
+        max-width: auto;
+        padding: 0 10px;
+        // width: 100%;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header__nav-list {
+        gap: 15px;
+    }
+    .header__nav-list-title {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 860px) {
+    .header__nav-line {
+        height: 35px;
+        gap: 20px;
+    }
+
+    .header__nav-list-title {
+        font-size: 10px;
+    }
+    .header__phone-number {
+        display: none;
+    }
+    .header__logo-block {
+        height: 50px;
+    }
+    .header__logo {
+        height: 20px;
+    }
+    .header__search input {
+        height: 20px;
+        font-size: 10px;
+    }
+    .btn {
+        height: 36px;
+    }
+    .header__nav-list {
+        display: none;
+    }
+    .header__price-list-block {
+        display: flex;
+    }
+}
+@media (max-width: 600px) {
+    .header__cart-total {
+        display: none;
+    }
+    .header__cart-block {
+        margin-right: 10px;
+    }
+    .header__contact-block {
+        height: 100%;
+        margin-right: -10px;
+        gap: 0;
+    }
+    .btn_header {
+        display: none;
+    }
+    .header__call-block {
+        justify-content: center;
+        width: 47px;
+        height: 100%;
+        border-left: 1px solid var(--line-color);
+    }
+    .header__call-block-img {
+        display: none;
+    }
+    .header__call-block-img_dark {
+        display: block;
+    }
+    .contact-menu {
+        bottom: 0;
+        left: auto;
+        right: -47px;
+        transform: translate(0, 100%);
+    }
+    .burger {
+        &__wrapper {
+            display: flex;
+        }
+    }
+    .modal-call-order__block {
+        padding: 40px 14px;
+        width: 320px;
+        height: auto;
+    }
+    .modal-call-order__close-btn {
+        width: 12px;
+        height: 12px;
+        & div {
+            width: 17px;
+        }
+    }
+    .modal-call-order__form-title {
+        font-size: 12px;
+    }
+
+    .modal-call-order__title {
+        font-size: 26px;
+    }
+    .modal-call-order__subtitle {
+        font-size: 12px;
+    }
+    .modal-call-order input {
+        height: 40px;
+    }
+    .btn_call-order {
+        height: 50px;
+        width: 100%;
+    }
+}
+@media (max-width: 360px) {
+    .header__logo img {
+        height: 15px;
+    }
+}
