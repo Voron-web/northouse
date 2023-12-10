@@ -4,7 +4,7 @@ const headerSearchBtn = document.querySelector('#header_search')
 const headerSearchInput = document.querySelector('.header__search-input-block')
 
 function checkClick(event) {
-    console.log(event.target);
+    // console.log(event.target);
     if (event.target == headerSearchBtn || event.target.closest('.header__search-input-block')) {
         openHeaderSearch()
         contactMenuClose()
