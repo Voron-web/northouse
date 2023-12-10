@@ -9,13 +9,14 @@ function checkClick(event) {
         openHeaderSearch()
         contactMenuClose()
     }
-    else if (event.target.closest('.header__call-block')) {
-        contactMenuToggle()
-        closeHeaderSearch()
-    }
+
     else if (event.target == contactMenuOrderBtn) {
         contactMenuClose()
         openCallOrderModal()
+    }
+    else if (event.target.closest('.header__call-block')) {
+        contactMenuToggle()
+        closeHeaderSearch()
     }
     else if (event.target == headerCallOrderBtn) {
         contactMenuClose()
@@ -46,7 +47,6 @@ const phoneNumberBtn = document.querySelector('.header__phone-number')
 const contactMenuBlock = document.querySelector('.contact-menu')
 
 function contactMenuToggle() {
-    console.log('toggle');
     phoneNumberBtn.classList.toggle('open')
     contactMenuBlock.classList.toggle('hide')
 }

@@ -514,6 +514,12 @@
         justify-content: start;
         gap: 5px;
     }
+    .contacts__content {
+        flex-direction: column;
+    }
+    .contacts__map {
+        flex: 0 0 430px;
+    }
 }
 @media (max-width: 400px) {
     .services__item .grid__item-text,
@@ -539,6 +545,7 @@
         padding: 14px;
         border-radius: 5px;
     }
+    .order__input-block textarea,
     .order__input-block input {
         background: #f5f6fa;
     }

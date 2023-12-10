@@ -1685,6 +1685,17 @@ body {
 .order__img img {
   width: 100%;
 }
+.order__img_contacts {
+  position: relative;
+}
+.order__img_contacts img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .order__form {
   padding-right: 50px;
   flex: 0 0 45%;
@@ -1707,6 +1718,27 @@ body {
   border: 1px solid var(--line-color);
   font-size: 18px;
 }
+.order__input-block input::-moz-placeholder {
+  font-size: 15px;
+}
+.order__input-block input::placeholder {
+  font-size: 15px;
+}
+.order__input-block textarea {
+  padding: 14px 17px;
+  margin-top: 10px;
+  resize: none;
+  width: 100%;
+  height: 124px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.order_contacts .order__input-block {
+  margin-top: 16px;
+}
+.order_contacts .btn {
+  margin-top: 40px;
+}
 .order__input-title {
   font-size: 14px;
   color: var(--font-color-grey);
@@ -1717,6 +1749,67 @@ body {
 .order__btn {
   margin-top: 30px;
   width: 220px;
+}
+.order__file {
+  margin-top: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+.order__file svg {
+  width: 17px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.order__file input {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 150%);
+}
+.order__file input::file-selector-button {
+  display: none;
+}
+.order__file span {
+  margin-left: 15px;
+  font-size: 11px;
+  color: var(--font-color-grey);
+}
+.order__file label {
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.nav-line {
+  padding: 30px 0 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.nav-line__link {
+  color: var(--font-color-grey);
+}
+.nav-line__link_last {
+  color: var(--main-color-red);
+}
+
+.contacts__title {
+  padding-top: 30px;
+}
+.contacts__content {
+  padding-bottom: 50px;
+  display: flex;
+  gap: 50px;
+}
+.contacts__grid {
+  flex: 0 0 47%;
+}
+.contacts__map {
+  flex: 0 0 47%;
+}
+.contacts__map iframe {
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 1400px) {
@@ -2198,6 +2291,12 @@ body {
     justify-content: start;
     gap: 5px;
   }
+  .contacts__content {
+    flex-direction: column;
+  }
+  .contacts__map {
+    flex: 0 0 430px;
+  }
 }
 @media (max-width: 400px) {
   .services__item .grid__item-text,
@@ -2223,6 +2322,7 @@ body {
     padding: 14px;
     border-radius: 5px;
   }
+  .order__input-block textarea,
   .order__input-block input {
     background: #f5f6fa;
   }
