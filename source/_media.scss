@@ -407,6 +407,17 @@
     .order__form-title {
         padding-top: 0 !important;
     }
+    .order {
+        & .section-title {
+            padding-top: 0 !important;
+        }
+    }
+    .order_price .order__wrapper {
+        padding-top: 20px !important;
+    }
+    .order__img_price {
+        display: none;
+    }
 }
 @media (max-width: 600px) {
     .header__cart-total {
@@ -519,6 +530,9 @@
     }
     .contacts__map {
         flex: 0 0 430px;
+    }
+    .nav-line__wrapper {
+        display: none;
     }
 }
 @media (max-width: 400px) {

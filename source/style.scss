@@ -1297,6 +1297,11 @@ body {
     &__space {
         height: 55px;
     }
+    &_once {
+        & .section-title {
+            padding-top: 15px !important;
+        }
+    }
 }
 .about {
     &__title {
@@ -1743,6 +1748,17 @@ body {
                 transform: translate(-50%, 0);
             }
         }
+        &_price {
+            position: relative;
+            & img {
+                position: absolute;
+                width: auto;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translate(-65%, 0);
+            }
+        }
     }
 
     &__form {
@@ -1788,6 +1804,11 @@ body {
         }
         & .btn {
             margin-top: 40px;
+        }
+    }
+    &_price {
+        & .order__wrapper {
+            padding: 40px 0;
         }
     }
     &__input-title {
@@ -1861,6 +1882,20 @@ body {
         & iframe {
             height: 100%;
             width: 100%;
+        }
+    }
+}
+.text-info {
+    & .section-title {
+        padding-top: 30px;
+    }
+    &_services {
+    }
+
+    &__text {
+        padding-bottom: 40px;
+        & p {
+            margin-top: 20px;
         }
     }
 }
