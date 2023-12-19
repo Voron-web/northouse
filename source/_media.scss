@@ -952,6 +952,39 @@
         width: 34px;
         font-size: 12px;
     }
+    .header__nav-line-wrapper {
+        position: relative;
+    }
+
+    .header__search-input-block {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        position: absolute;
+        inset: 0;
+        background: #1e2436;
+        z-index: 10;
+        overflow: visible;
+        &.hide {
+            display: none;
+        }
+    }
+    .header__search-input-block input {
+        margin-left: 20px;
+    }
+    .header__search-input-img {
+        left: 34px;
+    }
+
+    .header__search-cancel {
+        margin-right: 20px;
+        display: block;
+        color: #fff;
+        font-size: 10px;
+    }
+    .header__search-history {
+        display: block;
+    }
 }
 @media (max-width: 360px) {
     .header__logo img {

@@ -3,6 +3,7 @@ let quantity = 1;
 const quantityBlock = document.querySelector('.product__quantity-display')
 const buyModal = document.querySelector('.modal-cart')
 
+
 changeQuantity()
 document.addEventListener('click', checkClick)
 

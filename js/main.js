@@ -2,14 +2,21 @@
 
 const headerSearchBtn = document.querySelector('#header_search')
 const headerSearchInput = document.querySelector('.header__search-input-block')
+const headerSearchInputItem = document.querySelector('.header__search-input-block input')
+const headerSearchCancelBtn = document.querySelector('.header__search-cancel')
+const headerSearchResultBlock = document.querySelector('.header__search-result')
+
+
 
 function checkClick(event) {
-    // console.log(event.target);
-    if (event.target == headerSearchBtn || event.target.closest('.header__search-input-block')) {
+    console.log(event.target);
+    if (event.target == headerSearchCancelBtn) {
+        closeHeaderSearch()
+    }
+    else if (event.target == headerSearchBtn || event.target.closest('.header__search-input-block')) {
         openHeaderSearch()
         contactMenuClose()
     }
-
     else if (event.target == contactMenuOrderBtn) {
         contactMenuClose()
         openCallOrderModal()
@@ -18,12 +25,14 @@ function checkClick(event) {
         contactMenuToggle()
         closeHeaderSearch()
     }
+
     else if (event.target == headerCallOrderBtn) {
         contactMenuClose()
         closeHeaderSearch()
         openCallOrderModal()
     }
     else {
+
         closeHeaderSearch()
         if (event.target.closest('.contact-menu')) {
         } else {
@@ -35,10 +44,25 @@ function checkClick(event) {
 function openHeaderSearch() {
     headerSearchBtn.classList.add('hide')
     headerSearchInput.classList.remove('hide')
+    headerSearchInputItem.addEventListener('input', openSearchResult)
 }
 function closeHeaderSearch() {
     headerSearchBtn.classList.remove('hide')
     headerSearchInput.classList.add('hide')
+    headerSearchResultBlock.classList.remove('hide')
+    headerSearchResultBlock.classList.add('hide')
+    headerSearchInputItem.removeEventListener('input', openSearchResult)
+    headerSearchInputItem.value = ''
+}
+
+function openSearchResult() {
+    if (headerSearchInputItem.value.length > 0) {
+        headerSearchResultBlock.classList.remove('hide')
+    }
+    else {
+        headerSearchResultBlock.classList.remove('hide')
+        headerSearchResultBlock.classList.add('hide')
+    }
 }
 
 /********************** contact-menu *******************/
