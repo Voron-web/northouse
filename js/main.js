@@ -97,3 +97,27 @@ function burgerClose() {
 
 /******************* global *******************/
 document.addEventListener('click', checkClick)
+
+
+
+class SelectMenu {
+    constructor(selectBtnClass, selectListClass) {
+        this.btnClassName = selectBtnClass;
+        this.btn = document.querySelector(`${selectBtnClass}`);
+        this.listClassName = selectListClass;
+        this.list = document.querySelector(`${selectListClass}`);
+        this.title = this.btn.querySelector('span');
+    }
+    toggle() {
+        this.btn.classList.toggle('open')
+    }
+    close() {
+        this.btn.classList.remove('open')
+    }
+    changeTitle() {
+        // debugger
+        const id = this.list.querySelector('input:checked').id
+        const text = this.list.querySelector(`label[for = "${id}"]`).textContent
+        this.title.textContent = text
+    }
+}
