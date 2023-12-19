@@ -2858,7 +2858,6 @@ body {
   display: flex;
   border-radius: 5px;
   background: #fff;
-  overflow: hidden;
 }
 .product-list__calc-selecters {
   flex: 1 0 auto;
@@ -3044,36 +3043,70 @@ body {
   margin-top: 21px;
   color: var(--main-color-red);
 }
-.product-list__grid_short {
+.product-list__grid {
   position: relative;
   margin-top: 40px;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-.product-list__grid_short .grid-lines {
+.product-list__grid .grid-lines {
   position: absolute;
   inset: 0;
 }
-.product-list__grid_short .grid-h-line {
+.product-list__grid .grid-h-3lines {
+  position: absolute;
+  inset: 0;
+}
+.product-list__grid .grid-h-3lines .grid-line {
   position: absolute;
   right: -25px;
   height: 1px;
   width: calc(100% + 55px);
   background: var(--line-color);
 }
-.product-list__grid_short .grid-h-line:nth-child(1) {
+.product-list__grid .grid-h-3lines .grid-line:nth-child(1) {
   top: -20px;
 }
-.product-list__grid_short .grid-h-line:nth-child(2) {
+.product-list__grid .grid-h-3lines .grid-line:nth-child(2) {
   top: 33%;
 }
-.product-list__grid_short .grid-h-line:nth-child(3) {
+.product-list__grid .grid-h-3lines .grid-line:nth-child(3) {
   top: 67%;
 }
-.product-list__grid_short .grid-h-line:nth-child(4) {
+.product-list__grid .grid-h-3lines .grid-line:nth-child(4) {
   bottom: -20px;
 }
-.product-list__grid_short .grid-v-line {
+.product-list__grid .grid-h-4lines {
+  position: absolute;
+  inset: 0;
+}
+.product-list__grid .grid-h-4lines .grid-line {
+  position: absolute;
+  right: -25px;
+  height: 1px;
+  width: calc(100% + 55px);
+  background: var(--line-color);
+}
+.product-list__grid .grid-h-4lines .grid-line:nth-child(1) {
+  top: -20px;
+}
+.product-list__grid .grid-h-4lines .grid-line:nth-child(2) {
+  top: 24.5%;
+}
+.product-list__grid .grid-h-4lines .grid-line:nth-child(3) {
+  top: 50%;
+}
+.product-list__grid .grid-h-4lines .grid-line:nth-child(4) {
+  bottom: 24.5%;
+}
+.product-list__grid .grid-h-4lines .grid-line:nth-child(5) {
+  bottom: -20px;
+}
+.product-list__grid .grid-v-lines {
+  position: absolute;
+  inset: 0;
+}
+.product-list__grid .grid-v-lines .grid-line {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -3081,10 +3114,10 @@ body {
   height: calc(100% + 40px);
   background: var(--line-color);
 }
-.product-list__grid_short .grid-v-line:nth-child(5) {
+.product-list__grid .grid-v-lines .grid-line:nth-child(1) {
   left: 32.7%;
 }
-.product-list__grid_short .grid-v-line:nth-child(6) {
+.product-list__grid .grid-v-lines .grid-line:nth-child(2) {
   left: 67.2%;
 }
 .product-list__pagination {

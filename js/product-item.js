@@ -13,7 +13,6 @@ materialSelect.list.addEventListener('change', () => {
 })
 
 function checkClick(event) {
-    // console.log(event.target);
     if (materialSelect.btn.classList.contains('open')) {
         if (!event.target.closest(materialSelect.btnClassName)) {
             materialSelect.close()

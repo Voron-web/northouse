@@ -1,5 +1,4 @@
 const sortSelect = new SelectMenu('.product-list__sort-select', '.product-list__sort-list')
-const calcMaterialSelect = new SelectMenu('.product-list__material-calc-select', '.product-list__material-calc-list')
 const menu = document.querySelector('.filter__filters')
 const menuCaregory = document.querySelector('.filter__categories')
 const closeBtnCategory = menuCaregory.querySelector('.filter__close-btn')
@@ -12,20 +11,67 @@ const shadow = document.querySelector('.page-shadow')
 const calcModal = document.querySelector('.modal-recall')
 const calcModalBtnClose = calcModal.querySelector('.modal-recall__close-btn')
 const calcModalBtn = calcModal.querySelector('.btn_return')
-
+let calcMaterialSelect = {}
 
 
 sortSelect.list.addEventListener('change', () => {
-    console.log('change');
     sortSelect.changeTitle()
     sortSelect.close()
 })
 
-calcMaterialSelect.list.addEventListener('change', () => {
-    console.log('change');
-    calcMaterialSelect.changeTitle()
-    calcMaterialSelect.close()
-})
+if (document.querySelector('.product-list__calc')) {
+    calcMaterialSelect = new SelectMenu('.product-list__material-calc-select', '.product-list__material-calc-list')
+
+    calcMaterialSelect.list.addEventListener('change', () => {
+        calcMaterialSelect.changeTitle()
+        calcMaterialSelect.close()
+    })
+
+    $(".range_door").ionRangeSlider({
+        skin: "round",
+        min: 1,
+        max: 10,
+        from: 3,
+        grid: false,
+        onStart: (data) => {
+            document.querySelector('input[data-calc = "door"]').value = data.from
+        },
+        onChange: (data) => {
+            document.querySelector('input[data-calc = "door"]').value = data.from
+        }
+    });
+    $(".range_apartment").ionRangeSlider({
+        skin: "round",
+        min: 1,
+        max: 10,
+        from: 1,
+        grid: false,
+        onStart: (data) => {
+            document.querySelector('input[data-calc = "apartment"]').value = data.from
+        },
+        onChange: (data) => {
+            document.querySelector('input[data-calc = "apartment"]').value = data.from
+        }
+    });
+
+    let rangeDoor = $(".range_door").data('ionRangeSlider')
+    let rangeApartment = $(".range_apartment").data('ionRangeSlider')
+
+    document.querySelector('input[data-calc = "door"]').addEventListener('change', (event) => {
+        let val = event.target.value
+        rangeDoor.update({
+            from: val,
+        })
+    })
+
+    document.querySelector('input[data-calc = "apartment"]').addEventListener('change', (event) => {
+        let val = event.target.value
+        rangeApartment.update({
+            from: val,
+        })
+    })
+}
+
 
 document.addEventListener('click', checkProductListPageClick)
 
@@ -38,9 +84,7 @@ function checkProductListPageClick(event) {
     if (event.target.closest(sortSelect.btnClassName)) {
         sortSelect.toggle()
     }
-    else if (event.target.closest(calcMaterialSelect.btnClassName)) {
-        calcMaterialSelect.toggle()
-    }
+
     else if (event.target.closest('.product-list__filter-btn')) {
         filterSelectOpen()
     }
@@ -50,6 +94,13 @@ function checkProductListPageClick(event) {
     else if (event.target.closest('.product-list__calc-btn')) {
         calcModalOpen()
     }
+    else if (document.querySelector('.product-list__calc')) {
+        if (event.target.closest(calcMaterialSelect.btnClassName)) {
+            calcMaterialSelect.toggle()
+        }
+    }
+
+
 }
 
 function filterSelectOpen() {
@@ -107,48 +158,5 @@ function calcModalClose() {
     calcModalBtnClose.removeEventListener('click', calcModalClose)
 }
 
-$(".range_door").ionRangeSlider({
-    skin: "round",
-    min: 1,
-    max: 10,
-    from: 3,
-    grid: false,
-    onStart: (data) => {
-        document.querySelector('input[data-calc = "door"]').value = data.from
-    },
-    onChange: (data) => {
-        document.querySelector('input[data-calc = "door"]').value = data.from
-    }
-});
-$(".range_apartment").ionRangeSlider({
-    skin: "round",
-    min: 1,
-    max: 10,
-    from: 1,
-    grid: false,
-    onStart: (data) => {
-        document.querySelector('input[data-calc = "apartment"]').value = data.from
-    },
-    onChange: (data) => {
-        document.querySelector('input[data-calc = "apartment"]').value = data.from
-    }
-});
-
-let rangeDoor = $(".range_door").data('ionRangeSlider')
-let rangeApartment = $(".range_apartment").data('ionRangeSlider')
-
-document.querySelector('input[data-calc = "door"]').addEventListener('change', (event) => {
-    let val = event.target.value
-    rangeDoor.update({
-        from: val,
-    })
-})
-
-document.querySelector('input[data-calc = "apartment"]').addEventListener('change', (event) => {
-    let val = event.target.value
-    rangeApartment.update({
-        from: val,
-    })
-})
 
 

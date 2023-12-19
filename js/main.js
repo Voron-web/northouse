@@ -9,7 +9,6 @@ const headerSearchResultBlock = document.querySelector('.header__search-result')
 
 
 function checkClick(event) {
-    console.log(event.target);
     if (event.target == headerSearchCancelBtn) {
         closeHeaderSearch()
     }
