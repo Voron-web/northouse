@@ -209,6 +209,10 @@
     }
     .header__logo {
         height: 20px;
+        gap: 5px;
+    }
+    .header__logo-text {
+        font-size: 10px;
     }
     .header__search input {
         height: 20px;
@@ -535,6 +539,12 @@
             height: 1px;
             background: var(--line-color);
         }
+        &_mobile {
+            display: block;
+        }
+    }
+    .filter__mobile-subtitle {
+        display: block;
     }
     .filter__item-btn {
         right: 20px;

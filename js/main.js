@@ -5,6 +5,7 @@ const headerSearchInput = document.querySelector('.header__search-input-block')
 const headerSearchInputItem = document.querySelector('.header__search-input-block input')
 const headerSearchCancelBtn = document.querySelector('.header__search-cancel')
 const headerSearchResultBlock = document.querySelector('.header__search-result')
+const headerCallBlock = document.querySelector('.header__call-block')
 
 
 
@@ -14,19 +15,19 @@ function checkClick(event) {
     }
     else if (event.target == headerSearchBtn || event.target.closest('.header__search-input-block')) {
         openHeaderSearch()
-        contactMenuClose()
+        // contactMenuClose()
     }
     else if (event.target == contactMenuOrderBtn) {
-        contactMenuClose()
+        // contactMenuClose()
         openCallOrderModal()
     }
     else if (event.target.closest('.header__call-block')) {
-        contactMenuToggle()
+        // contactMenuToggle()
         closeHeaderSearch()
     }
 
     else if (event.target == headerCallOrderBtn) {
-        contactMenuClose()
+        // contactMenuClose()
         closeHeaderSearch()
         openCallOrderModal()
     }
@@ -37,6 +38,14 @@ function checkClick(event) {
         } else {
             contactMenuClose()
         }
+    }
+}
+
+function checkMove(event) {
+    if (event.target.closest('.header__call-block')) {
+        contactMenuOpen()
+    } else {
+        contactMenuClose()
     }
 }
 
@@ -69,9 +78,9 @@ function openSearchResult() {
 const phoneNumberBtn = document.querySelector('.header__phone-number')
 const contactMenuBlock = document.querySelector('.contact-menu')
 
-function contactMenuToggle() {
-    phoneNumberBtn.classList.toggle('open')
-    contactMenuBlock.classList.toggle('hide')
+function contactMenuOpen() {
+    phoneNumberBtn.classList.add('open')
+    contactMenuBlock.classList.remove('hide')
 }
 function contactMenuClose() {
     phoneNumberBtn.classList.remove('open')
@@ -117,9 +126,21 @@ function burgerClose() {
     burgerMenuClose.removeEventListener('click', burgerClose)
 
 }
+/******************* плавающий хедер *******************/
+document.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        document.querySelector('.header__nav-line-wrapper').classList.add('fixed')
+    }
+    else {
+        document.querySelector('.header__nav-line-wrapper').classList.remove('fixed')
+
+    }
+})
+
 
 /******************* global *******************/
 document.addEventListener('click', checkClick)
+document.addEventListener("pointermove", checkMove)
 
 
 
@@ -138,9 +159,9 @@ class SelectMenu {
         this.btn.classList.remove('open')
     }
     changeTitle() {
-        // debugger
         const id = this.list.querySelector('input:checked').id
         const text = this.list.querySelector(`label[for = "${id}"]`).textContent
         this.title.textContent = text
     }
 }
+

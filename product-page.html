@@ -599,17 +599,13 @@
 
     <div class="nav-line__wrapper bg_light">
         <div class="container">
-            <div class="nav-line">
-                <a class="nav-line__link" href="index.html">Главная</a>
-                &nbsp &gt &nbsp
-                <a class="nav-line__link" href="index.html">Каталог</a>
-                &nbsp &gt &nbsp
-                <a class="nav-line__link" href="index.html">Силовые ящики</a>
-                &nbsp &gt &nbsp
-                <a class="nav-line__link" href="index.html">Ящики ЯБ модернизированные</a>
-                &nbsp &gt &nbsp
-                <a class="nav-line__link nav-line__link_last" href="#">ЯБ-1-100-X У3 (с ППН-100А)</a>
-            </div>
+            <ul class="nav-line">
+                <li><a class="nav-line__link" href="index.html">Главная</a></li>
+                <li><a class="nav-line__link" href="index.html">Каталог</a></li>
+                <li><a class="nav-line__link" href="index.html">Силовые ящики</a></li>
+                <li><a class="nav-line__link" href="index.html">Ящики ЯБ модернизированные</a></li>
+                <li><span class="nav-line__link nav-line__link_last" href="#">ЯБ-1-100-X У3 (с ППН-100А)</span></li>
+            </ul>
         </div>
     </div>
     <section class="product bg_light">
@@ -619,7 +615,6 @@
                     <div class="product__presentation-img">
                         <div class="swiper product__slider_main">
                             <div class="slider__pagination product__pagination"></div>
-
                             <div class="slider__btn-next product__btn-next">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12"
                                     fill="none">
@@ -734,14 +729,14 @@
                                 <div class="product__material-select">
                                     <span class="product__material-name">Алюминий</span>
                                     <div class="product__material-list">
+                                        <input type="radio" name="material" id="material1" value="al" checked>
                                         <label for="material1">Алюминий</label>
-                                        <input type="radio" name="material" id="material1" value="al">
-                                        <label for="material2">Материал2</label>
                                         <input type="radio" name="material" id="material2" value="material_2">
-                                        <label for="material3">Материал3</label>
+                                        <label for="material2">Материал2</label>
                                         <input type="radio" name="material" id="material3" value="material_3">
-                                        <label for="material4">Материал4</label>
+                                        <label for="material3">Материал3</label>
                                         <input type="radio" name="material" id="material4" value="material_4">
+                                        <label for="material4">Материал4</label>
                                     </div>
                                 </div>
                             </div>
@@ -1542,6 +1537,78 @@
                 Остальные товары
             </div>
             <div class="other-product__grid">
+                <div class="other-product__item">
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="/img/product/card1.png" alt="">
+                            <div class="product-card__label-block">
+                                <div class="product-card__label product-card__label_red">Хит продаж</div>
+                                <div class="product-card__label product-card__label_yellow">Акция</div>
+                            </div>
+                        </div>
+                        <div class="product__stock enable">
+                            <!-- если присутствует класс enable то отображается блок product__instock,
+                                            если класс enable отсутствует то блок product__outofstock-->
+                            <div class="product__instock">В наличии</div>
+                            <div class="product__outofstock">Нет в наличии</div>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__name">
+                                ЯРПП-25 У3
+                            </div>
+                            <div class="product-card__price">
+                                5900 руб.
+                                <span class="product-card__old-price">7000 руб.</span>
+                            </div>
+                        </div>
+                        <div class="product-card__btn-block">
+                            <div class="small-btn small-btn_red product-card__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.3125 0.745728L17.5 4.89546V8.53832L10.2678 12.7138L9.66067 11.6622L16.2857 7.83725V5.59653L9.70531 1.79733L10.3125 0.745728ZM15.0714 6.10981H0.5V7.3241H15.0714V6.10981Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-product__item">
+                    <div class="product-card">
+                        <div class="product-card__image">
+                            <img src="/img/product/card1.png" alt="">
+                            <div class="product-card__label-block">
+                                <div class="product-card__label product-card__label_red">Хит продаж</div>
+                                <div class="product-card__label product-card__label_yellow">Акция</div>
+                            </div>
+                        </div>
+                        <div class="product__stock enable">
+                            <!-- если присутствует класс enable то отображается блок product__instock,
+                                            если класс enable отсутствует то блок product__outofstock-->
+                            <div class="product__instock">В наличии</div>
+                            <div class="product__outofstock">Нет в наличии</div>
+                        </div>
+                        <div class="product-card__info">
+                            <div class="product-card__name">
+                                ЯРПП-25 У3
+                            </div>
+                            <div class="product-card__price">
+                                5900 руб.
+                                <span class="product-card__old-price">7000 руб.</span>
+                            </div>
+                        </div>
+                        <div class="product-card__btn-block">
+                            <div class="small-btn small-btn_red product-card__btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.3125 0.745728L17.5 4.89546V8.53832L10.2678 12.7138L9.66067 11.6622L16.2857 7.83725V5.59653L9.70531 1.79733L10.3125 0.745728ZM15.0714 6.10981H0.5V7.3241H15.0714V6.10981Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="other-product__item">
                     <div class="product-card">
                         <div class="product-card__image">

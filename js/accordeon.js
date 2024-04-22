@@ -6,5 +6,6 @@ function checkAccordeonClick(event) {
     if (event.target.closest('[data-accordeon="btn"]')) {
         event.target.closest('[data-accordeon="btn"]').classList.toggle('hide')
         event.target.closest('[data-accordeon="btn"]').parentNode.querySelector('[data-accordeon="hiddenContent"]').classList.toggle('hide')
+        event.target.closest('[data-accordeon="btn"]').parentNode.querySelector('[data-accordeon="indicator"]').classList.toggle('hide')
     }
 }

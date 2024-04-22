@@ -1,2 +1,7 @@
 *.zip
 /PhotoSwipe-master
+.vscode/
+Калькулятор/
+Правки/
+.VSCodeCounter/
+source/
