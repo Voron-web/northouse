@@ -86,43 +86,43 @@ h6 {
 
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/Inter-Bold.eot"), url("./fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Inter-Bold.woff2") format("woff2"), url("./fonts/Inter-Bold.woff") format("woff"), url("./fonts/Inter-Bold.ttf") format("truetype");
+  src: url("../fonts/Inter-Bold.eot"), url("../fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/Roboto-Regular.eot"), url("./fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/Roboto-Regular.woff2") format("woff2"), url("./fonts/Roboto-Regular.woff") format("woff"), url("./fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto-Regular.eot"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/Roboto-Medium.eot"), url("./fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("./fonts/Roboto-Medium.woff2") format("woff2"), url("./fonts/Roboto-Medium.woff") format("woff"), url("./fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../fonts/Roboto-Medium.eot"), url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/Roboto-Bold.eot"), url("./fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Roboto-Bold.woff2") format("woff2"), url("./fonts/Roboto-Bold.woff") format("woff"), url("./fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto-Bold.eot"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("./fonts/Raleway-SemiBold.eot"), url("./fonts/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"), url("./fonts/Raleway-SemiBold.woff2") format("woff2"), url("./fonts/Raleway-SemiBold.woff") format("woff"), url("./fonts/Raleway-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Raleway-SemiBold.eot"), url("../fonts/Raleway-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "PT Root UI";
-  src: url("./fonts/PTRootUI-Regular.eot"), url("./fonts/PTRootUI-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/PTRootUI-Regular.woff2") format("woff2"), url("./fonts/PTRootUI-Regular.woff") format("woff"), url("./fonts/PTRootUI-Regular.ttf") format("truetype");
+  src: url("../fonts/PTRootUI-Regular.eot"), url("../fonts/PTRootUI-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTRootUI-Regular.woff2") format("woff2"), url("../fonts/PTRootUI-Regular.woff") format("woff"), url("../fonts/PTRootUI-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Akrobat";
-  src: url("./fonts/Akrobat-Regular.eot"), url("./fonts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/Akrobat-Regular.woff2") format("woff2"), url("./fonts/Akrobat-Regular.woff") format("woff"), url("./fonts/Akrobat-Regular.ttf") format("truetype");
+  src: url("../fonts/Akrobat-Regular.eot"), url("../fonts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Akrobat-Regular.woff2") format("woff2"), url("../fonts/Akrobat-Regular.woff") format("woff"), url("../fonts/Akrobat-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
